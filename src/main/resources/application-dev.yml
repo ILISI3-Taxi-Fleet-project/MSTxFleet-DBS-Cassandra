@@ -1,0 +1,9 @@
+
+spring:
+  docker:
+    compose:
+      file: ./MSTxFleet-DBS-Cassandra/compose.yaml
+  application:
+    name: MSTxFleet-DBS-Cassandra
+server:
+  port: 0
