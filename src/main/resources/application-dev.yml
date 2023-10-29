@@ -1,8 +1,5 @@
 
 spring:
-  docker:
-    compose:
-      file: ./MSTxFleet-DBS-Cassandra/compose.yaml
   application:
     name: MSTxFleet-DBS-Cassandra
   cassandra:
@@ -10,6 +7,9 @@ spring:
     contact-points: cassandra
     schema-action: create_if_not_exists
     create-keyspace: true
+  cloud:
+    discovery:
+      enabled: true
 
 
 server:
