@@ -5,5 +5,13 @@ spring:
       file: ./MSTxFleet-DBS-Cassandra/compose.yaml
   application:
     name: MSTxFleet-DBS-Cassandra
+  cassandra:
+    keyspace-name: mykeyspace
+    contact-points: cassandra
+    schema-action: create_if_not_exists
+    create-keyspace: true
+
+
 server:
   port: 0
+
