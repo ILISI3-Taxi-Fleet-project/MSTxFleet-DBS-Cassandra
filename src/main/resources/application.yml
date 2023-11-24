@@ -1,3 +1,7 @@
 spring:
   application:
     name: MSTxFleet-DBS-Cassandra
+
+  jpa:
+    hibernate:
+      ddl-auto: none
