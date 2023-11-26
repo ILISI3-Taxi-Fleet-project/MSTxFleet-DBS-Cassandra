@@ -16,8 +16,9 @@ import java.util.UUID;
 @Table("user_locations")
 public class UserLocation {
 
-    //make it auto generated
+    // Unique identifier for the location
     @PrimaryKey
+    @Column
     private String key = UUID.randomUUID().toString();
 
     // Unique identifier for the user
@@ -28,10 +29,17 @@ public class UserLocation {
     @Column
     private Instant createdAt;
 
-
     // the user's location in the form of a WKT point (e.g., POINT(2.3 4.5))
     @Column
     private String location;
+
+    // Type of user (e.g., driver, passenger)
+    @Column
+    private String userType;
+
+    // Whether the user is online or not
+    @Column
+    private Boolean isOnline;
 
     // Altitude of the user's location
     @Column
@@ -41,40 +49,10 @@ public class UserLocation {
     @Column
     private double accuracy;
 
-    // Speed at which the user is moving
-    @Column
-    private double speed;
-
-    // Direction in which the user is heading
-    @Column
-    private double heading;
-
-    // Name of the user
-    @Column
-    private String userName;
-
-    // Unique identifier of the device from which the location was recorded
-    @Column
-    private String deviceId;
-
-    // Type of device (e.g., smartphone, GPS tracker)
-    @Column
-    private String deviceType;
 
     // Type of location data (e.g., GPS, WiFi-based, cellular-based)
     @Column
     private String locationType;
 
-    // Type of activity the user is engaged in (e.g., walking, driving)
-    @Column
-    private String activityType;
-
-    // Relevant status information
-    @Column
-    private String status;
-
-    // Destination of the user
-    @Column
-    private String destination;
 
 }
