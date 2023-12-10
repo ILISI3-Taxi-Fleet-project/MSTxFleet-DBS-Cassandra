@@ -1,4 +1,3 @@
-
 spring:
   application:
     name: MSTxFleet-DBS-Cassandra
@@ -10,8 +9,11 @@ spring:
   cloud:
     discovery:
       enabled: true
-
-
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 server:
   port: 0
+
 
